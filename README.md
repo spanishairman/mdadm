@@ -388,6 +388,8 @@ Consistency Policy : resync
 Видим, что теперь у нас устройство /dev/vdc является диском горячей замены.
 
 К данной работе прилагаю также запись консоли. Для того, чтобы воспроизвести выполненные действия, необходимо скачать файлы [screenrecord-2024-06-07.script](screenrecord-2024-06-07.script)
-и [screenrecord-2024-06-07.time](screenrecord-2024-06-07.time), после чего выполнить в каталоге с загруженными файлами команду scriptreplay ./screenrecord-2024-06-07.time ./screenrecord-2024-06-07.script
-
+и [screenrecord-2024-06-07.time](screenrecord-2024-06-07.time), после чего выполнить в каталоге с загруженными файлами команду:
+```
+scriptreplay ./screenrecord-2024-06-07.time ./screenrecord-2024-06-07.script
+```
 Спасибо за прочтение!
