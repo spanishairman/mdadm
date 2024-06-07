@@ -421,11 +421,11 @@ scriptreplay ./screenrecord-2024-06-07.time ./screenrecord-2024-06-07.script
 После этого ошибка ушла.
 
 #### Обновление. Настроить автоматическое монтирование созданных на дисковом массиве разделов
-Для выполнения автоматического монтирования наших разделов добавим в [Vagrantfile](Vagrantfile) установку пакета arch-install-scripts таким образом:
+Для выполнения автоматического монтирования наших разделов добавим в [Vagrantfile](Vagrantfile), в разделе provisioning,  установку пакета arch-install-scripts таким образом:
 ```
 apt -y install mdadm arch-install-scripts
 ```
-А также в разделе provisioning следующую команду:
+А также, в этом же разделе, следующую команду:
 ```
 genfstab -U / | grep "/media/part" >> /etc/fstab
 ```
