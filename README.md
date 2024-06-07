@@ -404,7 +404,7 @@ scriptreplay ./screenrecord-2024-06-07.time ./screenrecord-2024-06-07.script
     Debian12: mount: /media/part1: wrong fs type, bad option, bad superblock on /dev/md0p1, missing codepage or helper program, or other error.
     Debian12:        dmesg(1) may have more information after failed mount system call.
 ```
-Т.е., сразу после создания разделов, команда mkfs.ext4 не видит первый раздел, но видит остальные. Я попробовал добавить в [Vagrantfile](Vagrantfile) строку /bin/sleep 5, подозревая
+Т.е., сразу после того как были созданы разделы, команда mkfs.ext4 не видит первый раздел, но видит остальные. Я попробовал добавить в [Vagrantfile](Vagrantfile) строку /bin/sleep 5, подозревая
 что каким-то образом не успевает обновиться информация о новом разделе и утилита создания файловой системы выдает ошибку. Выглядит это так:
 ```
     parted -s /dev/md0 mklabel gpt
