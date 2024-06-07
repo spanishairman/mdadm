@@ -1,0 +1,420 @@
+Script started on 2024-06-07 13:24:23+03:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="191" LINES="42"]
+7]2;max@localhost.localdomain:~/vagrant/vg3]1;localhost.localdomain8max@localhost:~/vagrant/vg3> vagrant up
+[0mBringing machine 'Debian12' up with 'libvirt' provider...[0m
+[1;33m==> Debian12: No version detected for /home/max/vagrant/images/debian12, using timestamp to watch for modifications. Consider
+==> Debian12: generating a local metadata for the box with a version to allow better handling.
+==> Debian12: See https://www.vagrantup.com/docs/boxes/format#box-metadata for further details.[0m
+[1m==> Debian12: Creating image (snapshot of base box volume).[0m
+[1m==> Debian12: Creating domain with the following settings...[0m
+[1m==> Debian12:  -- Name:              vg3_Debian12[0m
+[1m==> Debian12:  -- Title:             Debian12[0m
+[1m==> Debian12:  -- Description:       Виртуальная машина на базе дистрибутива Debian Linux[0m
+[1m==> Debian12:  -- Domain type:       kvm[0m
+[1m==> Debian12:  -- Cpus:              2[0m
+[1m==> Debian12:  -- Feature:           acpi[0m
+[1m==> Debian12:  -- Feature:           apic[0m
+[1m==> Debian12:  -- Feature:           pae[0m
+[1m==> Debian12:  -- Clock offset:      utc[0m
+[1m==> Debian12:  -- Memory:            2048M[0m
+[1m==> Debian12:  -- Management MAC:    52:54:00:27:28:83[0m
+[1m==> Debian12:  -- Loader:            [0m
+[1m==> Debian12:  -- Nvram:             [0m
+[1m==> Debian12:  -- Base box:          /home/max/vagrant/images/debian12[0m
+[1m==> Debian12:  -- Storage pool:      images[0m
+[1m==> Debian12:  -- Image(vda):        /home/max/libvirt/images/vg3_Debian12.img, virtio, 40G[0m
+[1m==> Debian12:  -- Disk driver opts:  cache='default'[0m
+[1m==> Debian12:  -- Kernel:            [0m
+[1m==> Debian12:  -- Initrd:            [0m
+[1m==> Debian12:  -- Graphics Type:     vnc[0m
+[1m==> Debian12:  -- Graphics Port:     -1[0m
+[1m==> Debian12:  -- Graphics IP:       127.0.0.1[0m
+[1m==> Debian12:  -- Graphics Password: Not defined[0m
+[1m==> Debian12:  -- Video Type:        cirrus[0m
+[1m==> Debian12:  -- Video VRAM:        16384[0m
+[1m==> Debian12:  -- Video 3D accel:    false[0m
+[1m==> Debian12:  -- Sound Type:        [0m
+[1m==> Debian12:  -- Keymap:            en-us[0m
+[1m==> Debian12:  -- TPM Backend:       passthrough[0m
+[1m==> Debian12:  -- TPM Path:          [0m
+[1m==> Debian12:  -- Disks:         vdc(qcow2, virtio, 1G), vdd(qcow2, virtio, 1G), vde(qcow2, virtio, 1G), vdf(qcow2, virtio, 1G), vdg(qcow2, virtio, 1G)[0m
+[1m==> Debian12:  -- Disk(vdc):     /home/max/libvirt/images/vg3_Debian12-vdc.qcow2[0m
+[1m==> Debian12:  -- Disk(vdd):     /home/max/libvirt/images/vg3_Debian12-vdd.qcow2[0m
+[1m==> Debian12:  -- Disk(vde):     /home/max/libvirt/images/vg3_Debian12-vde.qcow2[0m
+[1m==> Debian12:  -- Disk(vdf):     /home/max/libvirt/images/vg3_Debian12-vdf.qcow2[0m
+[1m==> Debian12:  -- Disk(vdg):     /home/max/libvirt/images/vg3_Debian12-vdg.qcow2[0m
+[1m==> Debian12:  -- INPUT:             type=mouse, bus=ps2[0m
+[1m==> Debian12: Creating shared folders metadata...[0m
+[1m==> Debian12: Starting domain.[0m
+[1m==> Debian12: Waiting for domain to get an IP address...[0m
+[1m==> Debian12: Waiting for machine to boot. This may take a few minutes...[0m
+[0m    Debian12: SSH address: 192.168.121.10:22[0m
+[0m    Debian12: SSH username: vagrant[0m
+[0m    Debian12: SSH auth method: private key[0m
+[0m    Debian12: Warning: Host unreachable. Retrying...[0m
+[0m    Debian12: Warning: Host unreachable. Retrying...[0m
+[0m    Debian12: 
+    Debian12: Vagrant insecure key detected. Vagrant will automatically replace
+    Debian12: this with a newly generated keypair for better security.[0m
+[0m    Debian12: 
+    Debian12: Inserting generated public key within guest...[0m
+[0m    Debian12: Removing insecure key from the guest if it's present...[0m
+[0m    Debian12: Key inserted! Disconnecting and reconnecting using new SSH key...[0m
+[1m==> Debian12: Machine booted and ready![0m
+[1m==> Debian12: Running provisioner: shell...[0m
+[0m    Debian12: Running: inline script[0m
+[0;31m    Debian12: [0m
+[0;31m    Debian12: WARNING: apt does not have a stable CLI interface. Use with caution in scripts.[0m
+[0;31m    Debian12: [0m
+[0;32m    Debian12: Чтение списков пакетов…[0m
+[0;32m    Debian12: Построение дерева зависимостей…[0m
+[0;32m    Debian12: Чтение информации о состоянии…[0m
+[0;32m    Debian12: Будут установлены следующие дополнительные пакеты:[0m
+[0;32m    Debian12:   bsd-mailx exim4-base exim4-config exim4-daemon-light libgnutls-dane0[0m
+[0;32m    Debian12:   liblockfile1 libunbound8[0m
+[0;32m    Debian12: Предлагаемые пакеты:[0m
+[0;32m    Debian12:   exim4-doc-html | exim4-doc-info eximon4 spf-tools-perl swaks dracut-core[0m
+[0;32m    Debian12: Следующие НОВЫЕ пакеты будут установлены:[0m
+[0;32m    Debian12:   bsd-mailx exim4-base exim4-config exim4-daemon-light libgnutls-dane0[0m
+[0;32m    Debian12:   liblockfile1 libunbound8 mdadm[0m
+[0;32m    Debian12: Обновлено 0 пакетов, установлено 8 новых пакетов, для удаления отмечено 0 пакетов, и 0 пакетов не обновлено.[0m
+[0;32m    Debian12: Необходимо скачать 3 485 kB архивов.[0m
+[0;32m    Debian12: После данной операции объём занятого дискового пространства возрастёт на 7 429 kB.[0m
+[0;32m    Debian12: Пол:1 http://security.debian.org/debian-security bookworm-security/main amd64 libunbound8 amd64 1.17.1-2+deb12u2 [550 kB][0m
+[0;32m    Debian12: Пол:2 http://deb.debian.org/debian bookworm/main amd64 mdadm amd64 4.2-5 [443 kB][0m
+[0;32m    Debian12: Пол:3 http://deb.debian.org/debian bookworm/main amd64 exim4-config all 4.96-15+deb12u4 [256 kB][0m
+[0;32m    Debian12: Пол:4 http://deb.debian.org/debian bookworm/main amd64 exim4-base amd64 4.96-15+deb12u4 [1 117 kB][0m
+[0;32m    Debian12: Пол:5 http://deb.debian.org/debian bookworm/main amd64 libgnutls-dane0 amd64 3.7.9-2+deb12u2 [406 kB][0m
+[0;32m    Debian12: Пол:6 http://deb.debian.org/debian bookworm/main amd64 exim4-daemon-light amd64 4.96-15+deb12u4 [605 kB][0m
+[0;32m    Debian12: Пол:7 http://deb.debian.org/debian bookworm/main amd64 liblockfile1 amd64 1.17-1+b1 [17,0 kB][0m
+[0;32m    Debian12: Пол:8 http://deb.debian.org/debian bookworm/main amd64 bsd-mailx amd64 8.1.2-0.20220412cvs-1 [90,4 kB][0m
+[0;31m    Debian12: dpkg-preconfigure: не удалось заново открыть stdin: No such file or directory[0m
+[0;32m    Debian12: Получено 3 485 kB за 12с (279 kB/s)[0m
+[0;32m    Debian12: Выбор ранее не выбранного пакета mdadm.[0m
+[0;32m    Debian12: (Чтение базы данных … (Чтение базы данных … 5%(Чтение базы данных … 10%(Чтение базы данных … 15%(Чтение базы данных … 20%(Чтение базы данных … 25%(Чтение базы данных … 30%(Чтение базы данных … 35%(Чтение базы данных … 40%(Чтение базы данных … 45%(Чтение базы данных … 50%(Чтение базы данных … 55%(Чтение базы данных … 60%(Чтение базы данных … 65%(Чтение базы данных … 70%(Чтение базы данных … 75%(Чтение базы данных … 80%(Чтение базы данных … 85%(Чтение базы данных … 90%(Чтение базы данных … 95%(Чтение базы данных … 100%(Чтение базы данных … на данный момент установлено 155424 файла и каталога.)[0m
+[0;32m    Debian12: Подготовка к распаковке …/0-mdadm_4.2-5_amd64.deb …[0m
+[0;32m    Debian12: Распаковывается mdadm (4.2-5) …[0m
+[0;32m    Debian12: Выбор ранее не выбранного пакета exim4-config.[0m
+[0;32m    Debian12: Подготовка к распаковке …/1-exim4-config_4.96-15+deb12u4_all.deb …[0m
+[0;32m    Debian12: Распаковывается exim4-config (4.96-15+deb12u4) …[0m
+[0;32m    Debian12: Выбор ранее не выбранного пакета exim4-base.[0m
+[0;32m    Debian12: Подготовка к распаковке …/2-exim4-base_4.96-15+deb12u4_amd64.deb …[0m
+[0;32m    Debian12: Распаковывается exim4-base (4.96-15+deb12u4) …[0m
+[0;32m    Debian12: Выбор ранее не выбранного пакета libunbound8:amd64.[0m
+[0;32m    Debian12: Подготовка к распаковке …/3-libunbound8_1.17.1-2+deb12u2_amd64.deb …[0m
+[0;32m    Debian12: Распаковывается libunbound8:amd64 (1.17.1-2+deb12u2) …[0m
+[0;32m    Debian12: Выбор ранее не выбранного пакета libgnutls-dane0:amd64.[0m
+[0;32m    Debian12: Подготовка к распаковке …/4-libgnutls-dane0_3.7.9-2+deb12u2_amd64.deb …[0m
+[0;32m    Debian12: Распаковывается libgnutls-dane0:amd64 (3.7.9-2+deb12u2) …[0m
+[0;32m    Debian12: Выбор ранее не выбранного пакета exim4-daemon-light.[0m
+[0;32m    Debian12: Подготовка к распаковке …/5-exim4-daemon-light_4.96-15+deb12u4_amd64.deb …[0m
+[0;32m    Debian12: Распаковывается exim4-daemon-light (4.96-15+deb12u4) …[0m
+[0;32m    Debian12: Выбор ранее не выбранного пакета liblockfile1:amd64.[0m
+[0;32m    Debian12: Подготовка к распаковке …/6-liblockfile1_1.17-1+b1_amd64.deb …[0m
+[0;32m    Debian12: Распаковывается liblockfile1:amd64 (1.17-1+b1) …[0m
+[0;32m    Debian12: Выбор ранее не выбранного пакета bsd-mailx.[0m
+[0;32m    Debian12: Подготовка к распаковке …/7-bsd-mailx_8.1.2-0.20220412cvs-1_amd64.deb …[0m
+[0;32m    Debian12: Распаковывается bsd-mailx (8.1.2-0.20220412cvs-1) …[0m
+[0;32m    Debian12: Настраивается пакет libunbound8:amd64 (1.17.1-2+deb12u2) …[0m
+[0;32m    Debian12: Настраивается пакет exim4-config (4.96-15+deb12u4) …[0m
+[0;32m    Debian12: Adding system-user for exim (v4)[0m
+[0;32m    Debian12: Настраивается пакет liblockfile1:amd64 (1.17-1+b1) …[0m
+[0;32m    Debian12: Настраивается пакет mdadm (4.2-5) …[0m
+[0;32m    Debian12: Generating mdadm.conf... done.[0m
+[0;32m    Debian12: update-initramfs: deferring update (trigger activated)[0m
+[0;32m    Debian12: Generating grub configuration file ...[0m
+[0;32m    Debian12: File descriptor 3 (pipe:[20009]) leaked on vgs invocation. Parent PID 1899: /usr/sbin/grub-probe[0m
+[0;32m    Debian12: File descriptor 3 (pipe:[20009]) leaked on vgs invocation. Parent PID 1899: /usr/sbin/grub-probe[0m
+[0;32m    Debian12: File descriptor 3 (pipe:[20009]) leaked on vgs invocation. Parent PID 1910: /usr/sbin/grub-probe[0m
+[0;32m    Debian12: File descriptor 3 (pipe:[20009]) leaked on vgs invocation. Parent PID 1910: /usr/sbin/grub-probe[0m
+[0;32m    Debian12: File descriptor 3 (pipe:[20009]) leaked on vgs invocation. Parent PID 1921: /usr/sbin/grub-probe[0m
+[0;32m    Debian12: File descriptor 3 (pipe:[20009]) leaked on vgs invocation. Parent PID 1921: /usr/sbin/grub-probe[0m
+[0;32m    Debian12: File descriptor 3 (pipe:[20009]) leaked on vgs invocation. Parent PID 1932: /usr/sbin/grub-probe[0m
+[0;32m    Debian12: File descriptor 3 (pipe:[20009]) leaked on vgs invocation. Parent PID 1932: /usr/sbin/grub-probe[0m
+[0;32m    Debian12: File descriptor 3 (pipe:[20009]) leaked on vgs invocation. Parent PID 2001: /usr/sbin/grub-probe[0m
+[0;32m    Debian12: File descriptor 3 (pipe:[20009]) leaked on vgs invocation. Parent PID 2001: /usr/sbin/grub-probe[0m
+[0;32m    Debian12: File descriptor 3 (pipe:[20009]) leaked on vgs invocation. Parent PID 2012: /usr/sbin/grub-probe[0m
+[0;32m    Debian12: File descriptor 3 (pipe:[20009]) leaked on vgs invocation. Parent PID 2012: /usr/sbin/grub-probe[0m
+[0;32m    Debian12: File descriptor 3 (pipe:[20009]) leaked on vgs invocation. Parent PID 2023: /usr/sbin/grub-probe[0m
+[0;32m    Debian12: File descriptor 3 (pipe:[20009]) leaked on vgs invocation. Parent PID 2023: /usr/sbin/grub-probe[0m
+[0;32m    Debian12: File descriptor 3 (pipe:[20009]) leaked on vgs invocation. Parent PID 2034: /usr/sbin/grub-probe[0m
+[0;32m    Debian12: File descriptor 3 (pipe:[20009]) leaked on vgs invocation. Parent PID 2034: /usr/sbin/grub-probe[0m
+[0;32m    Debian12: Found background image: /usr/share/images/desktop-base/desktop-grub.png[0m
+[0;32m    Debian12: File descriptor 3 (pipe:[20009]) leaked on vgs invocation. Parent PID 2080: /usr/sbin/grub-probe[0m
+[0;32m    Debian12: File descriptor 3 (pipe:[20009]) leaked on vgs invocation. Parent PID 2080: /usr/sbin/grub-probe[0m
+[0;32m    Debian12: Found linux image: /boot/vmlinuz-6.1.0-21-amd64[0m
+[0;32m    Debian12: Found initrd image: /boot/initrd.img-6.1.0-21-amd64[0m
+[0;32m    Debian12: Found linux image: /boot/vmlinuz-6.1.0-18-amd64[0m
+[0;32m    Debian12: Found initrd image: /boot/initrd.img-6.1.0-18-amd64[0m
+[0;32m    Debian12: File descriptor 3 (pipe:[20009]) leaked on vgs invocation. Parent PID 2432: /usr/sbin/grub-probe[0m
+[0;32m    Debian12: File descriptor 3 (pipe:[20009]) leaked on vgs invocation. Parent PID 2432: /usr/sbin/grub-probe[0m
+[0;32m    Debian12: Warning: os-prober will not be executed to detect other bootable partitions.[0m
+[0;32m    Debian12: Systems on them will not be added to the GRUB boot configuration.[0m
+[0;32m    Debian12: Check GRUB_DISABLE_OS_PROBER documentation entry.[0m
+[0;32m    Debian12: done[0m
+[0;32m    Debian12: update-rc.d: warning: start and stop actions are no longer supported; falling back to defaults[0m
+[0;32m    Debian12: Created symlink /etc/systemd/system/sysinit.target.wants/mdadm-shutdown.service → /lib/systemd/system/mdadm-shutdown.service.[0m
+[0;32m    Debian12: Настраивается пакет libgnutls-dane0:amd64 (3.7.9-2+deb12u2) …[0m
+[0;32m    Debian12: Настраивается пакет exim4-base (4.96-15+deb12u4) …[0m
+[0;32m    Debian12: exim: DB upgrade, deleting hints-db[0m
+[0;32m    Debian12: Created symlink /etc/systemd/system/timers.target.wants/exim4-base.timer → /lib/systemd/system/exim4-base.timer.[0m
+[0;32m    Debian12: exim4-base.service is a disabled or a static unit, not starting it.[0m
+[0;32m    Debian12: Настраивается пакет exim4-daemon-light (4.96-15+deb12u4) …[0m
+[0;32m    Debian12: Настраивается пакет bsd-mailx (8.1.2-0.20220412cvs-1) …[0m
+[0;32m    Debian12: update-alternatives: используется /usr/bin/bsd-mailx для предоставления /usr/bin/mailx (mailx) в автоматическом режиме[0m
+[0;32m    Debian12: Обрабатываются триггеры для libc-bin (2.36-9+deb12u7) …[0m
+[0;32m    Debian12: Обрабатываются триггеры для man-db (2.11.2-2) …[0m
+[0;32m    Debian12: Обрабатываются триггеры для initramfs-tools (0.142) …[0m
+[0;32m    Debian12: update-initramfs: Generating /boot/initrd.img-6.1.0-21-amd64[0m
+[0;31m    Debian12: mdadm: Defaulting to version 1.2 metadata[0m
+[0;31m    Debian12: mdadm: array /dev/md0 started.[0m
+[0;31m    Debian12: Information: You may need to update /etc/fstab.[0m
+[0;31m    Debian12: [0m
+[0;31m    Debian12: Information: You may need to update /etc/fstab.[0m
+[0;31m    Debian12: [0m
+[0;31m    Debian12: Information: You may need to update /etc/fstab.[0m
+[0;31m    Debian12: [0m
+[0;31m    Debian12: Information: You may need to update /etc/fstab.[0m
+[0;31m    Debian12: [0m
+[0;31m    Debian12: Information: You may need to update /etc/fstab.[0m
+[0;31m    Debian12: [0m
+[0;31m    Debian12: mke2fs 1.47.0 (5-Feb-2023)[0m
+[0;32m    Debian12:                                                                                                                                                                                                                                                                                                                                                                                   Creating filesystem with 417792 1k blocks and 104448 inodes[0m
+[0;32m    Debian12: Filesystem UUID: b6dbb4c8-f4d4-45d3-90a2-e405069cd035[0m
+[0;32m    Debian12: Superblock backups stored on blocks:[0m
+[0;32m    Debian12: 	8193, 24577, 40961, 57345, 73729, 204801, 221185, 401409[0m
+[0;32m    Debian12: [0m
+[0;32m    Debian12: Allocating group tables:  0/51     done[0m
+[0;32m    Debian12: Writing inode tables:  0/51     done[0m
+[0;32m    Debian12: Creating journal (8192 blocks): done[0m
+[0;32m    Debian12: Writing superblocks and filesystem accounting information:  0/51     done[0m
+[0;32m    Debian12: [0m
+[0;31m    Debian12: mke2fs 1.47.0 (5-Feb-2023)[0m
+[0;32m    Debian12: Creating filesystem with 418816 1k blocks and 104832 inodes[0m
+[0;32m    Debian12: Filesystem UUID: 2631ca13-5d2e-422a-ab79-65f600ae9fe4[0m
+[0;32m    Debian12: Superblock backups stored on blocks:[0m
+[0;32m    Debian12: 	8193, 24577, 40961, 57345, 73729, 204801, 221185, 401409[0m
+[0;32m    Debian12: [0m
+[0;32m    Debian12: Allocating group tables:  0/52     done[0m
+[0;32m    Debian12: Writing inode tables:  0/52     done[0m
+[0;32m    Debian12: Creating journal (8192 blocks): done[0m
+[0;32m    Debian12: Writing superblocks and filesystem accounting information:  0/52     done[0m
+[0;32m    Debian12: [0m
+[0;31m    Debian12: mke2fs 1.47.0 (5-Feb-2023)[0m
+[0;32m    Debian12: Creating filesystem with 417792 1k blocks and 104448 inodes[0m
+[0;32m    Debian12: Filesystem UUID: 71f83a57-2317-4d91-8719-8ffac35e227c[0m
+[0;32m    Debian12: Superblock backups stored on blocks:[0m
+[0;32m    Debian12: 	8193, 24577, 40961, 57345, 73729, 204801, 221185, 401409[0m
+[0;32m    Debian12: [0m
+[0;32m    Debian12: Allocating group tables:  0/51     done[0m
+[0;32m    Debian12: Writing inode tables:  0/51     done[0m
+[0;32m    Debian12: Creating journal (8192 blocks): done[0m
+[0;32m    Debian12: Writing superblocks and filesystem accounting information:  0/51     done[0m
+[0;32m    Debian12: [0m
+[0;31m    Debian12: mke2fs 1.47.0 (5-Feb-2023)[0m
+[0;32m    Debian12: Creating filesystem with 418816 1k blocks and 104832 inodes[0m
+[0;32m    Debian12: Filesystem UUID: 9b2312df-6eed-4902-b68e-b8475f680845[0m
+[0;32m    Debian12: Superblock backups stored on blocks:[0m
+[0;32m    Debian12: 	8193, 24577, 40961, 57345, 73729, 204801, 221185, 401409[0m
+[0;32m    Debian12: [0m
+[0;32m    Debian12: Allocating group tables:  0/52     done[0m
+[0;32m    Debian12: Writing inode tables:  0/52     done[0m
+[0;32m    Debian12: Creating journal (8192 blocks): done[0m
+[0;32m    Debian12: Writing superblocks and filesystem accounting information:  0/52     done[0m
+[0;32m    Debian12: [0m
+[0;31m    Debian12: mke2fs 1.47.0 (5-Feb-2023)[0m
+[0;32m    Debian12: Creating filesystem with 417792 1k blocks and 104448 inodes[0m
+[0;32m    Debian12: Filesystem UUID: 873f0a3d-936d-4c19-a933-568553ca0c61[0m
+[0;32m    Debian12: Superblock backups stored on blocks:[0m
+[0;32m    Debian12: 	8193, 24577, 40961, 57345, 73729, 204801, 221185, 401409[0m
+[0;32m    Debian12: [0m
+[0;32m    Debian12: Allocating group tables:  0/51     done[0m
+[0;32m    Debian12: Writing inode tables:  0/51     done[0m
+[0;32m    Debian12: Creating journal (8192 blocks): done[0m
+[0;32m    Debian12: Writing superblocks and filesystem accounting information:  0/51     done[0m
+[0;32m    Debian12: [0m
+7]2;max@localhost.localdomain:~/vagrant/vg3]1;localhost.localdomain8max@localhost:~/vagrant/vg3> vagrant ssh
+Linux debian12 6.1.0-21-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.1.90-1 (2024-05-03) x86_64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Mon May 20 18:30:50 2024 from 192.168.122.1
+[?2004h]0;vagrant@debian12: ~[01;32mvagrant@debian12[00m:[01;34m~[00m$ sudo -i
+[?2004l[?2004hroot@debian12:~# cat /proc/mdstat
+[?2004lPersonalities : [raid6] [raid5] [raid4] 
+md0 : active raid5 vde[4] vdf[3](S) vdd[1] vdc[0]
+      2093056 blocks super 1.2 level 5, 512k chunk, algorithm 2 [3/3] [UUU]
+      
+unused devices: <none>
+[?2004hroot@debian12:~# mdadm -D /dev/md0
+[?2004l/dev/md0:
+           Version : 1.2
+     Creation Time : Fri Jun  7 13:25:56 2024
+        Raid Level : raid5
+        Array Size : 2093056 (2044.00 MiB 2143.29 MB)
+     Used Dev Size : 1046528 (1022.00 MiB 1071.64 MB)
+      Raid Devices : 3
+     Total Devices : 4
+       Persistence : Superblock is persistent
+
+       Update Time : Fri Jun  7 13:26:32 2024
+             State : clean 
+    Active Devices : 3
+   Working Devices : 4
+    Failed Devices : 0
+     Spare Devices : 1
+
+            Layout : left-symmetric
+        Chunk Size : 512K
+
+Consistency Policy : resync
+
+              Name : debian12:0  (local to host debian12)
+              UUID : 008448a0:0110af8c:6d8bc620:d607bb36
+            Events : 32
+
+    Number   Major   Minor   RaidDevice State
+       0     254       32        0      active sync   /dev/vdc
+       1     254       48        1      active sync   /dev/vdd
+       4     254       64        2      active sync   /dev/vde
+
+       3     254       80        -      spare   /dev/vdf
+[?2004hroot@debian12:~# [7mmdadm --manage /dev/md0 --fail /dev/vdc[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmdadm --manage /dev/md0 --fail /dev/vdc[C
+[?2004lmdadm: set /dev/vdc faulty in /dev/md0
+[?2004hroot@debian12:~# mdadm --manage /dev/md0 --fail /dev/vdc[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CD /dev/md0[K[1Pcat /proc/mdstat
+[?2004lPersonalities : [raid6] [raid5] [raid4] 
+md0 : active raid5 vde[4] vdf[3] vdd[1] vdc[0](F)
+      2093056 blocks super 1.2 level 5, 512k chunk, algorithm 2 [3/2] [_UU]
+      [==============>......]  recovery = 74.7% (783036/1046528) finish=0.0min speed=156607K/sec
+      
+unused devices: <none>
+[?2004hroot@debian12:~# cat /proc/mdstatmdadm --manage /dev/md0 --fail /dev/vdc[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CD /dev/md0[K
+[?2004l/dev/md0:
+           Version : 1.2
+     Creation Time : Fri Jun  7 13:25:56 2024
+        Raid Level : raid5
+        Array Size : 2093056 (2044.00 MiB 2143.29 MB)
+     Used Dev Size : 1046528 (1022.00 MiB 1071.64 MB)
+      Raid Devices : 3
+     Total Devices : 4
+       Persistence : Superblock is persistent
+
+       Update Time : Fri Jun  7 13:27:06 2024
+             State : clean 
+    Active Devices : 3
+   Working Devices : 3
+    Failed Devices : 1
+     Spare Devices : 0
+
+            Layout : left-symmetric
+        Chunk Size : 512K
+
+Consistency Policy : resync
+
+              Name : debian12:0  (local to host debian12)
+              UUID : 008448a0:0110af8c:6d8bc620:d607bb36
+            Events : 61
+
+    Number   Major   Minor   RaidDevice State
+       3     254       80        0      active sync   /dev/vdf
+       1     254       48        1      active sync   /dev/vdd
+       4     254       64        2      active sync   /dev/vde
+
+       0     254       32        -      faulty   /dev/vdc
+[?2004hroot@debian12:~# mdadm -D /dev/md0[1Pcat /proc/mdstat
+[?2004lPersonalities : [raid6] [raid5] [raid4] 
+md0 : active raid5 vde[4] vdf[3] vdd[1] vdc[0](F)
+      2093056 blocks super 1.2 level 5, 512k chunk, algorithm 2 [3/3] [UUU]
+      
+unused devices: <none>
+[?2004hroot@debian12:~# [7mmdadm --manage /dev/md0 --remove /dev/vdc[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmdadm --manage /dev/md0 --remove /dev/vdc
+[?2004lmdadm: hot removed /dev/vdc from /dev/md0
+[?2004hroot@debian12:~# [7mmdadm --zero-superblock /dev/vdc[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmdadm --zero-superblock /dev/vdc
+[?2004l[?2004hroot@debian12:~# mdadm --zero-superblock /dev/vdc[9@manage /dev/md0 --remove[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[25Pcat /proc/mdstat
+[?2004lPersonalities : [raid6] [raid5] [raid4] 
+md0 : active raid5 vde[4] vdf[3] vdd[1]
+      2093056 blocks super 1.2 level 5, 512k chunk, algorithm 2 [3/3] [UUU]
+      
+unused devices: <none>
+[?2004hroot@debian12:~# cat /proc/mdstatmdadm --zero-superblock /dev/vdc[9@manage /dev/md0 --remove[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[25Pcat /proc/mdstatmdadm -D /dev/md0
+[?2004l/dev/md0:
+           Version : 1.2
+     Creation Time : Fri Jun  7 13:25:56 2024
+        Raid Level : raid5
+        Array Size : 2093056 (2044.00 MiB 2143.29 MB)
+     Used Dev Size : 1046528 (1022.00 MiB 1071.64 MB)
+      Raid Devices : 3
+     Total Devices : 3
+       Persistence : Superblock is persistent
+
+       Update Time : Fri Jun  7 13:27:50 2024
+             State : active 
+    Active Devices : 3
+   Working Devices : 3
+    Failed Devices : 0
+     Spare Devices : 0
+
+            Layout : left-symmetric
+        Chunk Size : 512K
+
+Consistency Policy : resync
+
+              Name : debian12:0  (local to host debian12)
+              UUID : 008448a0:0110af8c:6d8bc620:d607bb36
+            Events : 63
+
+    Number   Major   Minor   RaidDevice State
+       3     254       80        0      active sync   /dev/vdf
+       1     254       48        1      active sync   /dev/vdd
+       4     254       64        2      active sync   /dev/vde
+[?2004hroot@debian12:~# [7mmdadm --manage /dev/md0 --add /dev/vdc[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmdadm --manage /dev/md0 --add /dev/vdc
+[?2004lmdadm: added /dev/vdc
+[?2004hroot@debian12:~# mdadm --manage /dev/md0 --add /dev/vdc[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CD /dev/md0[K
+[?2004l/dev/md0:
+           Version : 1.2
+     Creation Time : Fri Jun  7 13:25:56 2024
+        Raid Level : raid5
+        Array Size : 2093056 (2044.00 MiB 2143.29 MB)
+     Used Dev Size : 1046528 (1022.00 MiB 1071.64 MB)
+      Raid Devices : 3
+     Total Devices : 4
+       Persistence : Superblock is persistent
+
+       Update Time : Fri Jun  7 13:28:04 2024
+             State : active 
+    Active Devices : 3
+   Working Devices : 4
+    Failed Devices : 0
+     Spare Devices : 1
+
+            Layout : left-symmetric
+        Chunk Size : 512K
+
+Consistency Policy : resync
+
+              Name : debian12:0  (local to host debian12)
+              UUID : 008448a0:0110af8c:6d8bc620:d607bb36
+            Events : 66
+
+    Number   Major   Minor   RaidDevice State
+       3     254       80        0      active sync   /dev/vdf
+       1     254       48        1      active sync   /dev/vdd
+       4     254       64        2      active sync   /dev/vde
+
+       5     254       32        -      spare   /dev/vdc
+[?2004hroot@debian12:~# [?2004l
+выход
+[?2004h]0;vagrant@debian12: ~[01;32mvagrant@debian12[00m:[01;34m~[00m$ [?2004l
+выход
+Connection to 192.168.121.10 closed.
+7]2;max@localhost.localdomain:~/vagrant/vg3]1;localhost.localdomain8max@localhost:~/vagrant/vg3> vagrant destroy 
+[0m    Debian12: Are you sure you want to destroy the 'Debian12' VM? [y/N] [0my
+[1m==> Debian12: Removing domain...[0m
+[1m==> Debian12: Deleting the machine folder[0m
+7]2;max@localhost.localdomain:~/vagrant/vg3]1;localhost.localdomain8max@localhost:~/vagrant/vg3> exit
+exit
+
+Script done on 2024-06-07 13:28:33+03:00 [COMMAND_EXIT_CODE="0"]
