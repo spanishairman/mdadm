@@ -392,4 +392,57 @@ Consistency Policy : resync
 ```
 scriptreplay ./screenrecord-2024-06-07.time ./screenrecord-2024-06-07.script
 ```
+#### Дополнение. Ошибка монтирования первого раздела
+Иногда, при выполнении vagrant up, возможно появление ошибки:
+```
+    Debian12: mke2fs 1.47.0 (5-Feb-2023)
+    Debian12: The file /dev/md0p1 does not exist and no size was specified.
+    Debian12: mke2fs 1.47.0 (5-Feb-2023)
+```
+И далее:
+```
+    Debian12: mount: /media/part1: wrong fs type, bad option, bad superblock on /dev/md0p1, missing codepage or helper program, or other error.
+    Debian12:        dmesg(1) may have more information after failed mount system call.
+```
+Т.е., сразу после создания разделов, команда mkfs.ext4 не видит первый раздел, но видит остальные. Я попробовал добавить в [Vagrantfile](Vagrantfile) строку /bin/sleep 5, подозревая
+что каким-то образом не успевает обновиться информация о новом разделе и утилита создания файловой системы выдает ошибку. Выглядит это так:
+```
+    parted -s /dev/md0 mklabel gpt
+    parted /dev/md0 mkpart primary ext4 0% 20%
+    parted /dev/md0 mkpart primary ext4 20% 40%
+    parted /dev/md0 mkpart primary ext4 40% 60%
+    parted /dev/md0 mkpart primary ext4 60% 80%
+    parted /dev/md0 mkpart primary ext4 80% 100%
+    /bin/sleep 5
+    for i in $(seq 1 5); do mkfs.ext4 /dev/md0p$i; done
+    for i in $(seq 1 5); do mount --mkdir /dev/md0p$i /media/part$i; done
+
+```
+После этого ошибка ушла.
+
+#### Обновление. Настроить автоматическое монтирование созданных на дисковом массиве разделов
+Для выполнения автоматического монтирования наших разделов добавим в [Vagrantfile](Vagrantfile) установку пакета arch-install-scripts таким образом:
+```
+apt -y install mdadm arch-install-scripts
+```
+А также в разделе provisioning следующую команду:
+```
+genfstab -U / | grep "/media/part" >> /etc/fstab
+```
+В данном случае, выводимые устройства бeдут отображаться в формате UUID, если необходимо отображать метки устройств, то используйте ключ -L. Пример вывода при использовании разных ключей:
+```
+vagrant@debian12:~$ genfstab -U / | grep "/media/part"
+UUID=18280f2b-2124-4b5c-95ef-63315e9db0d3       /media/part1    ext4            rw,relatime,stripe=1024 0 2
+UUID=b6c69d9c-2bed-4106-926c-2bcfa1f68864       /media/part2    ext4            rw,relatime,stripe=1024 0 2
+UUID=3043fbd5-a4df-4244-a809-0b9fa924f202       /media/part3    ext4            rw,relatime,stripe=1024 0 2
+UUID=965b2e02-4b6e-4007-b705-52ee5ce0b6e9       /media/part4    ext4            rw,relatime,stripe=1024 0 2
+UUID=5b7aeb14-1334-4533-a312-d8a4d24ea1f9       /media/part5    ext4            rw,relatime,stripe=1024 0 2
+vagrant@debian12:~$ genfstab -L / | grep "/media/part"
+/dev/md0p1              /media/part1    ext4            rw,relatime,stripe=1024 0 2
+/dev/md0p2              /media/part2    ext4            rw,relatime,stripe=1024 0 2
+/dev/md0p3              /media/part3    ext4            rw,relatime,stripe=1024 0 2
+/dev/md0p4              /media/part4    ext4            rw,relatime,stripe=1024 0 2
+/dev/md0p5              /media/part5    ext4            rw,relatime,stripe=1024 0 2
+```
+
 Спасибо за прочтение!

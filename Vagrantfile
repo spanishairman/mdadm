@@ -78,7 +78,7 @@ Vagrant.configure("2") do |config|
     lv.storage :file, :size => '1G', :device => 'vdg', :allow_existing => false
   end
   config.vm.provision "shell", inline: <<-SHELL
-    apt -y install mdadm
+    apt -y install mdadm arch-install-scripts
     mdadm --create /dev/md0 --level=5  --raid-devices=3 /dev/vd{c,d,e} --spare-devices=1 /dev/vdf
     echo "DEVICE partitions" > /etc/mdadm/mdadm.conf
     mdadm --detail --scan --verbose | awk '/ARRAY/ {print}' >> /etc/mdadm/mdadm.conf
@@ -88,9 +88,10 @@ Vagrant.configure("2") do |config|
     parted /dev/md0 mkpart primary ext4 40% 60%
     parted /dev/md0 mkpart primary ext4 60% 80%
     parted /dev/md0 mkpart primary ext4 80% 100%
-  # /bin/sleep 5
+    /bin/sleep 5
     for i in $(seq 1 5); do mkfs.ext4 /dev/md0p$i; done
     for i in $(seq 1 5); do mount --mkdir /dev/md0p$i /media/part$i; done
+    genfstab -U / | grep "/media/part" >> /etc/fstab
     SHELL
   # Enable provisioning with a shell script. Additional provisioners such as
   # Ansible, Chef, Docker, Puppet and Salt are also available. Please see the
